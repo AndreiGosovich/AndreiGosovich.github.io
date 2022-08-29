@@ -287,7 +287,8 @@ hr{
     background-image: url(img/contact_tiitle.png);
     background-repeat: no-repeat;
     background-position-y: 129px;
-    background-size: contain 250px;
+    background-size: contain;
+    background-position-x: center;
     margin: 0 auto;
     height: 379px;
 }
@@ -316,7 +317,85 @@ hr{
     color: rgba(255, 255, 255, 0.6);
     max-width: 780px;
     margin: 0 auto;
-    color: green;
+}
+
+.contacts{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.contacts_form{
+    width: 60%;
+    background: #FFFFFF;
+    box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+}
+
+.contacts_form form{
+    margin: 56px;
+}
+
+.contacts .h_4{
+    /* font-weight: 500; */
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-top: 56px;
+}
+
+.contacts .par{
+    letter-spacing: 0.04em;
+    margin-top: 24px;
+}
+
+.contacts ul{
+    list-style-type: none;
+    margin-top: 24px;
+}
+
+.contacts ul li{
+    margin-top: 16px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    margin-left: 35px;
+}
+
+.contacts ul li a{
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+}
+
+.li_phone{
+    list-style-image: url(img/ic_phone_24px.svg);
+}
+
+.li_www{
+    list-style-image: url(img/ic_language_24px.svg);
+}
+
+.li_mail{
+    list-style-image: url(img/ic_email_24px.svg);
+}
+
+.contacts_form .h_4{
+    padding-bottom: 16px;
+}
+
+.from__field-caption{
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    opacity: 0.8;
+    margin-top: 32px;
+    margin-bottom: 8px;
 }
 
 .text_input{
@@ -324,27 +403,44 @@ hr{
     box-sizing: border-box;
     border-radius: 10px;
     opacity: 0.4;
-}
-
-.contacts{
-    display: flex;
-    flex-grow: 1;
-}
-
-.map{
     width: 100%;
-    height: 480px;
+    height: 72px;
+
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    opacity: 0.2;
+
+    padding: 21px 40px;
 }
-.submit_btm{
+
+.text_input.message{
+    height: 144px;
+}
+
+.submit_btn{
     background-color: #5a98d0;
     box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
     border-radius: 10px;
     font-weight: 500;
     font-size: 16px;
-    line-height: 16px;
+    line-height: 26px;
     text-align: center;
     color: #ffffff;
     text-transform: uppercase;
+    display: block;
+
+    width: 100%;
+    height: 72px;
+    margin-top: 72px;
+}
+
+.map{
+    width: 100%;
+    height: 480px;
+    padding-top: 96px;
 }
 
 @media (max-width: 1024px){
@@ -429,7 +525,9 @@ hr{
     /* CONTACTS */
 
     .top.contact{
+        height: 349px;
         background-position-y: 99px;
+        background-size: auto;
     }
 
     .top-contacts__info{
@@ -440,8 +538,29 @@ hr{
         max-width: 520px;
         padding-top: 10px;
     }
+
+    .contacts{
+        padding-top: 55px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacts_info{
+        width: 300px;
+    }
+
+    .contacts_form{
+        margin-top: 64px;
+        width: 80%;
+    }
+
+    .contacts_form form{
+        margin: 54px;
+    }
+
     .map.container{
-        margin: 64px 0 0 0;    
+        padding: 64px 0 0 0;
+        margin: 0;
     }
 
     .map{
@@ -600,8 +719,42 @@ hr{
         line-height: 30px;
     }
 
+    .contacts{
+        padding-top: 40px;
+    }
+
+    .contacts_form{
+        margin-top: 32px;
+        width: 95%;
+    }
+
+    .contacts_form form{
+        margin: 36px;
+    }
+
+    .from__field-caption{
+        font-size: 14px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+
+    .text_input{
+        height: 46px;
+        font-size: 16px;
+        padding: 13px 22px;
+    }
+
     .map.container{
-        margin: 32px 0 0 0;    
+        padding: 32px 0 0 0;
+        margin: 0;
+    }
+
+    .text_input.message{
+        height: 92px;
+    }
+
+    .submit_btn{
+        height: 46px;
     }
 
     .map{
